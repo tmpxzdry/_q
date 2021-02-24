@@ -1,7 +1,8 @@
 {
-    "name": "q",
+    "name": "_q",
     "version": "1.0.0",
     "description": "",
+    "private": true,
     "scripts": {
         "commit": "cross-env HUSKY_SKIP_HOOKS=1 git commit"
     },

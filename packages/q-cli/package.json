@@ -1,0 +1,47 @@
+{
+  "name": "q",
+  "version": "3.1.6",
+  "description": "cli tool for q",
+  "bin": {
+      "q": "./bin/q.js"
+  },
+  "scripts": {
+      "start": "tsc --watch",
+      "build": "rimraf dist/ && tsc",
+      "lint": "node ../q-scripts/bin/q-scripts.js lint"
+  },
+  "standard-version": {
+      "skip": {
+          "changelog": true,
+          "tag": true
+      }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+      "@commitlint/cli": "^8.3.5",
+      "@commitlint/config-conventional": "^8.3.4",
+      "chalk": "^3.0.0",
+      "commander": "^4.0.1",
+      "commitizen": "^4.1.2",
+      "cz-conventional-changelog": "^3.2.0",
+      "dayjs": "^1.8.23",
+      "git-cz": "4.5.0",
+      "gulp": "^4.0.2",
+      "lerna": "3.19.0",
+      "prompts": "^2.3.0",
+      "ts-node": "^8.5.4",
+      "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+      "@types/gulp": "^4.0.6",
+      "@types/node": "^12.12.14",
+      "husky": "latest",
+      "prettier": "^1.19.1",
+      "pretty-quick": "^2.0.1",
+      "tslint": "^5.20.1",
+      "tslint-plugin-prettier": "^2.0.1"
+  },
+  "main": "dist/index.js",
+  "gitHead": "1a00b1448c6e2fa3bb31779566dae30ae2e1c5a0"
+}
