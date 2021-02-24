@@ -26,5 +26,8 @@
         }
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    }
 }
