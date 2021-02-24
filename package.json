@@ -1,0 +1,30 @@
+{
+    "name": "q",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "commit": "cross-env HUSKY_SKIP_HOOKS=1 git commit"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged && node packages/q-cli/bin/q.js lint-tsc && lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "!(*.qconfig).{ts,tsx}": [
+            "node packages/q-scripts/bin/q-scripts.js lint-fix",
+            "git add"
+        ]
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "author": "",
+    "license": "ISC"
+}
