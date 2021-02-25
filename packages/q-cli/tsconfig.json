@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "es5",    //编译为es5
+        "lib": ["esnext"],  // 编译过程中需要引入的库列表.esnext包括decorators、async-await等提案。也叫es7,es2016
+        "rootDirs": ["src"],
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        // "noImplicitThis": true, strict已包含此项
+        "skipLibCheck": true,   // 忽略声明文件(*.d.ts)的检查。推荐开启
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true, // 支持ES7
+        "noUnusedLocals": true, // 没有使用的变量报错
+        "strict": true, // 开启严格模式
+        "strictPropertyInitialization": false, // 确保类的非undefined属性已在构造函数里初始化。--strict默认开启此项，暂不知道为何关闭
+        // "allowSyntheticDefaultImports": true,
+        "skipDefaultLibCheck": true,    // 忽略库的默认声明文件的类型煎炒
+        // "resolveJsonModule": true,
+        "downlevelIteration": true, // 此项主要是为了解决emoji编译后不能正确输出的问题
+        "importHelpers": false, // 配合downlevelIteration减少编译后的体积
+        "outDir": "dist",   // 输出目录
+        "declaration": true, // 生成相应的.d.ts
+        "declarationDir": "types"   // 上面生成.d.ts文件的存放位置
+    },
+    "include": ["src/**/*", "src/lib/tslint/tslint.json"],
+    "exclude": ["__test__/"]
+}
