@@ -23,17 +23,8 @@ if (!stat) {
 
     console.log(binPath)
 
-    // 在三个目录下执行tsc
-    // child_process.execSync(binPath, {
-    //     cwd: path.join(__dirname, '../../q-common')
-    // })
-
-    // child_process.execSync(binPath, {
-    //     cwd: path.join(__dirname, '../../q-scripts')
-    // })
-
+    // 在上级目录下执行tsc
     child_process.execSync(binPath, {
         cwd: path.join(__dirname, '../'),
-        shell: '/bin/bash'
     })
 }
